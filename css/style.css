@@ -64,8 +64,7 @@ h4 {
   font-size: 1.3rem;
 }
 a {
-  /* color: var(--color-black); */
-  color: var(--color-bg2);
+  color: var(--color-white);
   font-weight: bold;
 }
 img {
@@ -95,12 +94,19 @@ img {
 
 /* ========================= NAVBAR ================ */
 nav {
-  background: hwb(228 97% 1% / 0.969);
+  background: transparent ;
+  /* hwb(228 97% 1% / 0.969) */
   width: 100vw;
   height: 5rem;
   position: fixed;
   top: 0;
   z-index: 11;
+}
+
+/* change nav bar style  */
+.window-scroll{
+background: var(--color-primary);
+box-shadow: 0 1rem 2rem rgba(0,0,0,0.2) ;
 }
 .nav_container {
   height: 100%;
@@ -121,8 +127,9 @@ nav button {
   transition: var(--transition);
 }
 .nav_menu a:hover {
-  color: var(--color-black);
-  font-weight: bold;
+  /* color: var(--color-black); */
+  color: var(--color-bg2);
+  /* font-weight: bold; */
 }
 .container .logo-science-coching {
   width: 80px;
@@ -154,3 +161,93 @@ header {
   font-size: x-large;
   margin-top: 20px;
 }
+
+
+
+/* ========================= CATEGORIES ================ */
+.categories{
+  background: var(--color-bg1);
+  height:29rem ;
+}
+.categories h1{
+  line-height: 1;
+  margin-bottom:3rem ;
+}
+.categories_container{
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.categories-left{
+  margin-right: 4rem;
+}
+.categories-left p{
+  margin: 1rem 0 3rem;
+}
+.categories_right{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 1.2rem;
+}
+.category{
+  background: var(--color-bg2);
+  padding: 2rem;
+  transition: var(--transition);
+  border-radius: 2rem;
+
+
+}
+.category:hover {
+  box-shadow: 0 3rem 3rem rgb(0,0,0,0.3);
+  z-index: 1;
+}
+.category .baby-image {
+width: 50px;
+margin-bottom: 10px;
+}
+.category .adult-image{
+  width: 80px;
+  margin-bottom: 10px;
+  }
+
+  .category .young-image{
+    width: 90px;
+    margin-bottom: 10px;
+    }
+    .category h5{
+      font-size: 1rem;
+    }
+    .category p{
+      font-size: 0.85rem;
+    }
+
+
+    /* ========================= POPULAR COURSES ================ */
+    .course{
+      margin-top: 10rem;
+    }
+    .courses_container{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 2rem;
+    }
+    .courses{
+      background: var(--color-bg1);
+      text-align: center;
+      border: 1px solid transparent ;
+
+    }
+    .courses:hover{
+      background: transparent ;
+      border-color: var(--color-primary);
+      transition: var(--transition);
+
+    }
+    .course_info{
+      padding: 2rem;
+    }
+    .course_info p{
+      margin: 1.2rem 0 2rem;
+      font-size: 0.9rem;
+    }
+   
