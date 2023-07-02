@@ -94,7 +94,7 @@ img {
 
 /* ========================= NAVBAR ================ */
 nav {
-  background: transparent ;
+  background: transparent;
   /* hwb(228 97% 1% / 0.969) */
   width: 100vw;
   height: 5rem;
@@ -104,9 +104,9 @@ nav {
 }
 
 /* change nav bar style  */
-.window-scroll{
-background: var(--color-primary);
-box-shadow: 0 1rem 2rem rgba(0,0,0,0.2) ;
+.window-scroll {
+  background: var(--color-primary);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .nav_container {
   height: 100%;
@@ -162,92 +162,174 @@ header {
   margin-top: 20px;
 }
 
-
-
 /* ========================= CATEGORIES ================ */
-.categories{
+.categories {
   background: var(--color-bg1);
-  height:29rem ;
+  height: 29rem;
 }
-.categories h1{
+.categories h1 {
   line-height: 1;
-  margin-bottom:3rem ;
+  margin-bottom: 3rem;
 }
-.categories_container{
+.categories_container {
   display: grid;
   grid-template-columns: 40% 60%;
 }
 
-.categories-left{
+.categories-left {
   margin-right: 4rem;
 }
-.categories-left p{
+.categories-left p {
   margin: 1rem 0 3rem;
 }
-.categories_right{
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: 1.2rem;
+.categories_right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
 }
-.category{
+.category {
   background: var(--color-bg2);
   padding: 2rem;
   transition: var(--transition);
   border-radius: 2rem;
-
-
 }
 .category:hover {
-  box-shadow: 0 3rem 3rem rgb(0,0,0,0.3);
+  box-shadow: 0 3rem 3rem rgb(0, 0, 0, 0.3);
   z-index: 1;
 }
 .category .baby-image {
-width: 50px;
-margin-bottom: 10px;
+  width: 50px;
+  margin-bottom: 10px;
 }
-.category .adult-image{
+.category .adult-image {
   width: 80px;
   margin-bottom: 10px;
-  }
+}
 
-  .category .young-image{
-    width: 90px;
-    margin-bottom: 10px;
-    }
-    .category h5{
-      font-size: 1rem;
-    }
-    .category p{
-      font-size: 0.85rem;
-    }
+.category .young-image {
+  width: 90px;
+  margin-bottom: 10px;
+}
+.category h5 {
+  font-size: 1rem;
+}
+.category p {
+  font-size: 0.85rem;
+}
 
+/* ========================= POPULAR COURSES ================ */
+.course {
+  margin-top: 10rem;
+}
+.courses_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.courses {
+  background: var(--color-bg1);
+  text-align: center;
+  border: 1px solid transparent;
+}
+.courses:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+  transition: var(--transition);
+}
+.course_info {
+  padding: 2rem;
+}
+.course_info p {
+  margin: 1.2rem 0 2rem;
+  font-size: 0.9rem;
+}
 
-    /* ========================= POPULAR COURSES ================ */
-    .course{
-      margin-top: 10rem;
-    }
-    .courses_container{
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 2rem;
-    }
-    .courses{
-      background: var(--color-bg1);
-      text-align: center;
-      border: 1px solid transparent ;
+/* ========================= FAQ ================ */
+.faqs {
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+  background: var(--color-bg1);
+}
+.faqs_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.faq {
+  padding: 2rem;
+  display: flex;
+  gap: 1.4rem;
+  height: fit-content;
+  background: var(--color-primary);
+}
 
-    }
-    .courses:hover{
-      background: transparent ;
-      border-color: var(--color-primary);
-      transition: var(--transition);
+.faq:hover {
+  cursor: pointer;
+}
+.faq h4:hover {
+  color: var(--color-bg2);
+}
+.faq h4 {
+  font-size: 1rem;
+  line-height: 2.2;
+}
+.faq_icon {
+  align-items: flex-start;
+  font-size: 1.2rem;
+}
 
-    }
-    .course_info{
-      padding: 2rem;
-    }
-    .course_info p{
-      margin: 1.2rem 0 2rem;
-      font-size: 0.9rem;
-    }
-   
+.faq p {
+  margin-top: 0.8rem;
+  display: none;
+}
+.faq.open p {
+  display: block;
+}
+
+/* ========================= TESTMONIALS ================ */
+.testimonials_container {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 5rem;
+}
+.testimonial {
+  padding-top: 2rem;
+}
+.testimonials_container h2{
+  padding-top: 4rem;
+}
+.avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1rem;
+  margin: 0 auto 1rem;
+  border: 1rem solid var(--color-bg1);
+}
+
+.testimonial_info{
+  text-align: center;
+}
+.testimonial_body{
+  background: var(--color-primary);
+  padding: 2rem;
+  margin-top: 3rem;
+  position: relative;
+}
+.testimonial_body::before {
+  content: "";
+  display: block;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    var(--color-primary),
+    var(--color-primary),
+    var(--color-primary)
+    );
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: 50%;
+  top: -1.5rem;
+  transform: rotate(45deg);
+}
