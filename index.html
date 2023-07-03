@@ -335,7 +335,69 @@
         </article>
 
       </div>
-    </section>          1:15min
+      <div class="swiper-1">
+      <div class="swiper-pagination "></div>
+    </div>
+    </section>
+
+    <!================== END OF STUDENT TESTIMONIALS ============!>
+    
+    <!================== Footer ============!>
+    <footer class="footer">
+      <div class="container footer_container">
+        <div class="footer-1">
+          <a href="index.html" class="footer_logo"><h4>Science Choching</h4></a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, asperiores?</p>
+        </div>
+
+        <div class="footer_2">
+          <h4>Permalinks</h4>
+          <ul class="permalinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+
+        <div class="footer_3">
+          <h4>Primacy</h4>
+          <ul class="privacy">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Term And Condition</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_4">
+          <h4>Developer</h4>
+          <div>
+            <p>+91 953200000</p>
+            <p>vik60267185454@gmail.com</p>
+          </div>
+
+          <ul class="footer_socials">
+            <li>
+              <a href="#"><i class="ri-facebook-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-invision-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-github-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer_copyright"></div>
+        <small>Copyright  </small>
+
+      </div>
+    </footer>
+    
+   
 
 
     <!----Js----->
@@ -351,7 +413,13 @@
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-        },     1:25
+        },  
+        // when windows width is >= 600px
+        breakpoints: {
+          600: {
+            slidesPerView: 2
+          }
+        }
       });
     </script>
 <!----Js SLIDER End----->
