@@ -165,7 +165,7 @@ header {
 /* ========================= CATEGORIES ================ */
 .categories {
   background: var(--color-bg1);
-  height: 29rem;
+  height: 32rem;
 }
 .categories h1 {
   line-height: 1;
@@ -294,7 +294,7 @@ header {
 .testimonial {
   padding-top: 2rem;
 }
-.testimonials_container h2{
+.testimonials_container h2 {
   padding-top: 4rem;
 }
 .avatar {
@@ -307,10 +307,10 @@ header {
   border: 1rem solid var(--color-bg1);
 }
 
-.testimonial_info{
+.testimonial_info {
   text-align: center;
 }
-.testimonial_body{
+.testimonial_body {
   background: var(--color-primary);
   padding: 2rem;
   margin-top: 3rem;
@@ -325,7 +325,7 @@ header {
     var(--color-primary),
     var(--color-primary),
     var(--color-primary)
-    );
+  );
   width: 3rem;
   height: 3rem;
   position: absolute;
@@ -333,49 +333,112 @@ header {
   top: -1.5rem;
   transform: rotate(45deg);
 }
-.swiper-1{
-  padding-top:80px;
+.swiper-1 {
+  padding-top: 80px;
 }
 
-
 /* ========================= Footer ================ */
-footer{
+footer {
   background: var(--color-bg1);
   padding-top: 5rem;
   font-size: 0.9rem;
-
-
 }
-.footer_container{
+.footer_container {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 5rem;
 }
-.footer_container > div h4{
-margin-bottom: 1.2rem;
+.footer_container > div h4 {
+  margin-bottom: 1.2rem;
 }
 
-.footer-1 p{
-margin: 0 0 2rem;
+.footer-1 p {
+  margin: 0 0 2rem;
 }
 footer ul li {
   margin-bottom: 0.7rem;
 }
 
-footer ul li a:hover{
-  text-decoration: underline ;
+footer ul li a:hover {
+  text-decoration: underline;
 }
 
-.footer_socials{
+.footer_socials {
   display: flex;
   gap: 1rem;
   font-size: 2rem;
   margin-top: 2rem;
 }
-.footer_copyright{
+.footer_copyright {
   text-align: center;
   margin-top: 4rem;
   padding: 1.2rem 0;
   border-top: 1px solid var(--color-bg2);
 }
 
+/* =========================Media Queries (Tables) =======================*/
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  /*     ==================NavBAR================ */
+
+  nav button{
+    display: inline-block;
+    background: transparent ;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    cursor: pointer;
+
+  }
+  nav button#close-menu-button{
+    display: none;
+
+  }
+.nav_menu {
+  position: fixed;
+  top: 5rem;
+  right: 5%;
+  height: fit-content;
+  width: 18rem;
+  flex-direction: column;
+  gap: 0;
+  display: none;
+
+}
+.nav_menu li{
+  width: 100%;
+  height: 5.8rem;
+}
+
+.nav_menu li a{
+  background: var(--color-primary);
+  box-shadow: -4rem 6rem 10rem black ;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+
+}
+
+.nav_menu li a:hover{
+  background: var(--color-bg2);
+  color: var(--color-white);
+}
+}
