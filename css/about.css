@@ -1,1 +1,30 @@
-2 :06
+/*     ================== Achievement ================ */
+.about_achievements{
+    margin-top: 3rem;
+
+}
+.about_achievement-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+.about_achievement-right{
+    margin: 1.6rem 0 2.5rem;
+
+}
+.achievements_cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+.achievement_card{
+    background: var(--color-bg-1);  
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: red;
+}
+
+.achievement_card:hover{
+    background: var(bg2);
+}
