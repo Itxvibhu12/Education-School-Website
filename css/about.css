@@ -144,8 +144,53 @@ right: 0;
     padding: .8rem;
 }
 
+/* ==================== Meadia Quaries (Tablet) */
+@media screen and  (max-width: 1024px){
+    .about_achievements {
+        margin-top: 2rem;
+
+    }
+
+    .about_achievement-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .about_achievement-left {
+         width: 80%;
+         margin: 0 auto;
+    }
+
+    .team_container {
+        grid-template-columns: repeat(3 ,1fr);
+        gap: 1.5rem;
+    }
+    .team_member{
+        padding: 1rem;
+    }
+}
+  
+
+/* ==================== Meadia Quaries (Mobile) */
+@media screen and (max-width : 600px){
+    .achievement_cards{
+        grid-template-columns: repeat(1fr 1fr);
+        gap: 0.7rem;
+    }
+    .team_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .team_member{
+        padding: 0;
+    }
+
+    .team_member p{
+        margin-bottom: 1.5rem;
+    }
+}
 
 
 
 
-2:32
+
