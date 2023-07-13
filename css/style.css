@@ -135,6 +135,16 @@ nav button {
   width: 80px;
 }
 
+.login{
+  width: 9rem;
+  height: 2rem;
+  background: var(--color-danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+}
+
 /* ========================= Header ================ */
 
 header {
@@ -608,6 +618,8 @@ display: inline-block;
 }
 
 }
+
+
 
 
 
