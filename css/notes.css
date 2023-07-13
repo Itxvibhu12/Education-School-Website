@@ -40,6 +40,11 @@ html{
 }
 
 .notes_heading h2{
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.notes_heading h2{
 display: flex;
 align-items: center;
 justify-content: center;
@@ -120,4 +125,9 @@ justify-content: center;
     grid-template-columns: repeat(5,1fr);
     gap: 1rem;
     margin: 3rem 4rem;
+}
+
+.notes_heading_subject h2{
+    margin-top: .5rem;
+    font-weight: bold;
 }
