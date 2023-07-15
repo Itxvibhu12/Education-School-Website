@@ -131,3 +131,96 @@ justify-content: center;
     margin-top: .5rem;
     font-weight: bold;
 }
+
+
+/*  media Queary for tablet  */
+@media screen and (max-width:1024px){
+    
+    .container_notes_Quetion{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+    }
+
+
+    /* 10th notes Section  */
+
+    .box_subject_container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+
+    /* notes Card */
+    .notes_heading_subject{
+        height: 18rem;
+    }
+}
+
+
+/*  media Queary for Mobile  */
+
+@media screen and (max-width:600px){
+
+    .container_notes_Quetion{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+
+
+    }
+
+    .notes_heading{
+       width: var(--container-width-sm);
+        height: 28rem;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1rem;
+        
+        
+        
+    }
+
+    .container_subject_notes{
+        width: 7rem;
+        padding: 2rem;
+    }
+
+    .box_subject_container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        /* width: var(--container-width-sm); */
+        justify-content: center;
+       
+       
+
+        
+    }
+
+    .notes_heading_subject{
+        width: 20rem;
+        height: 14rem;
+        margin-bottom: 2rem;
+    }
+    .notes_subject_container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .container_subject_chapter_notes{
+        width: 4rem;
+    }
+    .heading_of_class{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+}

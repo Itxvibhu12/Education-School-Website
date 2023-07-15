@@ -68,3 +68,47 @@ sign_in_btn.addEventListener('click', () => {
 function showModal(){
   document.querySelector('.container_main_form').classList.add('show_modal_click')
 }
+
+
+// window.onload = function () {
+//   var hidemodal = document.getElementById('hide_modal');
+//   document.onclick = function(div1){
+//     if (div1.target.id !== 'hide_modal'){
+//       hidemodal.style.display = 'none';
+//     }
+//   };
+// };
+
+
+
+// google Auth Setup
+function signIn(){
+  let oauth2Endpoint = "https://accounts.google.com/o/oauth2/v2/auth"
+
+  let form = document.createElement('form')
+
+  form.setAttribute('method','GET')
+  form.setAttribute('action',oauth2Endpoint)
+
+  // add parameter
+  let params = {
+    "client_id" : "1063377268615-pncm6d1safq7ho1i4ck6bjee546u3eu8.apps.googleusercontent.com",
+    "redirect_uri" : "http://127.0.0.1:5500/index.html",
+    "response_type" : "token",
+    "scope" : "https://www.googleapis.com/auth/userinfo.profile" ,
+    "include_granted":'true',
+    'state':'pass-through-value'
+  }
+
+  for (var p in params) {
+    let input = document.createElement('input')
+    input.setAttribute('type','hidden')
+    input.setAttribute('name',p)
+    input.setAttribute('value',params[p])
+    form.appendChild(input)
+  }
+
+  document.body.appendChild(form)
+  form.submit()
+
+}

@@ -421,6 +421,12 @@ footer ul li a:hover {
     display: none;
 
   }
+  .login i{
+    width: 1rem;
+    height: 2rem;
+    position: relative;
+    position: absolute;
+  }
 .nav_menu {
   position: fixed;
   top: 5rem;
@@ -624,7 +630,7 @@ display: inline-block;
 
 
 
-/* ================== Signup popup modal ============ */
+/* ================== Signup popup modal ============
 
 body,input{
   font-family: 'Roboto', sans-serif;
@@ -862,7 +868,7 @@ form.sign-up-form{
 }
 
 /* ANIMATION sTYLING */
-
+/* 
 .container_main_form.sign-up-mode:before{
   transform: translate(100%, -50%);
   right: 52%;
@@ -901,12 +907,20 @@ form.sign-up-form{
   opacity: 1;
 }
 
+
 /* Responsiveness */
+/* 
 @media (max-width: 768px){
   .container_main_form{
-      min-height: 40rem;
-      height: 30rem;
+    width: 30rem;
+    height: 40rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
   }
+   
   .container_main_form:before{
       width: 1500px;
       height: 1500px;
@@ -982,11 +996,20 @@ form.sign-up-form{
 }
 
 
-@media (max-width: 576px) {
+@media screen and (max-width: 600px) {
+  
   form {
     padding: 0 1.5rem;
   }
-
+.container_main_form{
+  width: 20rem;
+  height: 10rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
   .image {
     display: none;
   }
@@ -1007,7 +1030,7 @@ form.sign-up-form{
     left: 50%;
   }
 }
-
+ */
 
 
 

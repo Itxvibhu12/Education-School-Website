@@ -59,9 +59,7 @@
           <li><a href="notes.html">Notes || PYQP</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact Us</a></li>
-          <div class="login">
-          <li><a href="#login">LogIn/Sign Up</a></li>
-        </div>
+          <li class="login_signup_nav" ><a href="#login" onclick="logout()">Log Out</a></li>
         </ul>
         <button id="open-menu-button"><i class="ri-menu-line"></i></button>
         <button id="close-menu-button">
@@ -70,7 +68,6 @@
       </div>
     </nav>
     <!================== End of NavBAr============!>
-
 
 
 
@@ -393,6 +390,37 @@
     <!================== END OF Footer ============!>
 
 
+    <script>
+
+let parmas = {}
+
+
+let regex ="/([^&=]+)=([^&]*)/g",m
+
+
+while (m = regex.exec(location.href)) {
+  parmas[decodeURIComponent(m[1])] = decodeURIComponent(m[2])
+  
+}
+
+if (Object.keys(parmas).length > 0){
+  localStorage.setItem('authinfo',JSON.stringify(parmas))
+}
+
+
+// hide the Access token
+window.history.pushState({},document.title,"/" + "index.html")
+
+
+let info = JSON.parse(localStorage.getItem('authInfo'))
+console.log(JSON.parse(localStorage.getItem('authInfo')))
+console.log(info['access_token'])
+console.log(info['expires_in'])
+
+      function logout(){
+
+      }
+    </script>
 
 
   <script src="./main.js"></script>

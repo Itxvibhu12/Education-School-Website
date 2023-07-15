@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/about.css" />
+    
 
 
 
@@ -55,9 +56,9 @@
           <li><a href="notes.html">Notes || PYQP</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact Us</a></li>
-          <div class="login">
-          <li><a href="#login" onclick="showModal()">LogIn/Sign Up</a></li>
-        </div>
+          <li class="login_signup_nav"><a href="#login" onclick="signIn()">LogIn/Sign Up</a></li>
+          <li><a href="" onclick="logout()"> Log Out</a></li>
+        
         </ul>
         <button id="open-menu-button"><i class="ri-menu-line"></i></button>
         <button id="close-menu-button">
@@ -67,96 +68,7 @@
     </nav>
     <!================== End of NavBAr============!>
 
-    <!================== Signup popup modal ============!>
 
-    <div class="container_main_form">
-      <div class="forms-container">
-          <div class="signin-signup">
-          <form class="sign-in-form">
-              <h2 class="title">Sign In</h2>
-              <div class="input-field">
-                  <i class='bx bxs-user'></i>
-                  <input type="text" placeholder="Username">
-              </div>
-              <div class="input-field">
-                  <i class='bx bxs-lock-alt'></i>
-                  <input type="password" placeholder="Password">
-              </div>
-              <input type="submit" value="Login" class="btn_modal solid">
-              <p class="social-text">Or sign in with social platforms</p>
-
-              <div class="social-media">
-                  <a href="#" class="social-icon">
-                      <i class='bx bxl-facebook'></i>
-                  </a>
-                  <a href="#" class="social-icon">
-                      <i class='bx bxl-twitter'></i>
-                  </a>
-                  <a href="#" class="social-icon">
-                      <i class='bx bxl-google'></i>
-                  </a>
-                  <a href="#" class="social-icon">
-                      <i class='bx bxl-linkedin'></i>
-                  </a>
-              </div>
-          </form>
-          <form class="sign-up-form">
-              <h2 class="title">Sign Up</h2>
-              <div class="input-field">
-                  <i class='bx bxs-user'></i>
-                  <input type="text" placeholder="Username">
-              </div>
-              <div class="input-field">
-                  <i class='bx bxs-envelope'></i>
-                  <input type="text" placeholder="Email">
-              </div>
-              <div class="input-field">
-                  <i class='bx bxs-lock-alt'></i>
-                  <input type="password" placeholder="Password">
-              </div>
-              <input type="submit" value="Sign Up" class="btn solid">
-              <p class="social-text">Or sign up with social platforms</p>
-
-              <div class="social-media">
-                  <a href="#" class="social-icon">
-                      <i class='bx bxl-facebook'></i>
-                  </a>
-                  <a href="#" class="social-icon">
-                      <i class='bx bxl-twitter'></i>
-                  </a>
-                  <a href="#" class="social-icon">
-                      <i class='bx bxl-google'></i>
-                  </a>
-                  <a href="#" class="social-icon">
-                      <i class='bx bxl-linkedin'></i>
-                  </a>
-              </div>
-          </form>
-          </div>
-      </div>
-      <div class="panels-container">
-          <div class="panel left-panel">
-              <div class="content">
-                  <h3>New here?</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, illo. Vitae, nesciunt.
-                  </p>
-                  <button class="btn_modal transparent" id="sign-up-btn">Sign up</button>
-              </div>
-              <img src="/images/Profiling_Monochromatic.png" class="image" alt="">
-          </div>
-          <div class="panel right-panel">
-              <div class="content">
-                  <h3>One of us?</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, illo. Vitae, nesciunt.
-                  </p>
-                  <button class="btn_modal transparent" id="sign-in-btn">Sign in</button>
-              </div>
-              <img src="/images/Authentication_Outline.png" class="image" alt="">
-          </div>
-      </div>
-  </div>
-
-  <!================== END OF Signup popup modal ============!>
 
 
     <!================== HEADER============!>
@@ -531,8 +443,77 @@
           }
         }
       });
+
+
+
+
+      //  for hide google auth Token for Sequirty
+
+
+
+      let parmas = {}
+  
+  
+  let regex ="/([^&=]+)=([^&]*)/g",m
+  
+  
+  while (m = regex.exec(location.href)) {
+    parmas[decodeURIComponent(m[1])] = decodeURIComponent(m[2])
+    
+  }
+  
+  if (Object.keys(parmas).length > 0){
+    localStorage.setItem('authinfo',JSON.stringify(parmas))
+  }
+  
+  
+  // hide the Access token
+  window.history.pushState({},document.title,"/" + "index.html")
+
+ 
+  
+  
+  let info = JSON.parse(localStorage.getItem('authInfo'))
+  console.log(JSON.parse(localStorage.getItem('authInfo')))
+  console.log(info['access_token'])
+  console.log(info['expires_in'])
+
+  fetch("https://www.googleapis.com/oauth2/v3/userinfo",{
+    headers:{
+      "Authorization" : `Bearer $ {info['access_token']}`
+    }
+  })
+
+  .then((data) => data.json())
+  .then((info) => {
+    console.log(info)
+  })
+  
+        function logout(){
+  
+          fetch("https://oauth2.googleapis.com/revoke?token=" + info['access_token'],{
+            method:'POST',
+            headers:{
+              'Content-type':'application/x-www-form-urlencoded'
+            }
+          })
+
+          .then((data) => {
+            location.href="notes.html"
+          })
+        }
+
+
+
     </script>
 <!----Js SLIDER End----->
+
+
+
+
+
+
+  
 
   </body>
 </html>
