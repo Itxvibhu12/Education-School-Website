@@ -2,7 +2,7 @@
 
 <h3>This Website Is Fully Responsive For Tablet || Mobile Phones || PC </h3>
 
- <a href="https://viibhugupta.github.io/Education-School-Website/">Click Here To See The Website</a> 
+ <a href="https://viibhugupta.github.io/Education-School-Website/" target="_blank">Click Here To See The Website</a> 
 
   # Home Page
   
