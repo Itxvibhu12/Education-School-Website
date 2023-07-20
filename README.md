@@ -12,6 +12,9 @@
 # I setup Google Authontication Useing Google Api  And JS
 
 
+![Screenshot from 2023-07-20 18-30-23-fotor-20230720183344](https://github.com/viibhuGupta/Education-School-Website/assets/108029219/231dae2f-f56e-454d-ae0e-e13b45557cb1)
+
+
 # Courses Page
 
 ![Screenshot from 2023-07-17 02-27-50](https://github.com/viibhuGupta/Education-School-Website/assets/108029219/3716e6e3-0d10-42d9-858a-4b9a676dd37a)
